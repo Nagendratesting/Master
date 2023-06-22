@@ -1,0 +1,39 @@
+pip install -r requirements.txt
+Request a free API key on Open Weather Map
+api_key= 0b13dd1cb3e210ac85fa8d4bc29a5f64
+This tutorial will also cover: (1) basic CSS design, (2) basic HTML with Jinja,
+ and (3) deploying a Flask app on Google Cloud
+ The steps we’ll take are listed below:
+
+Step 0: Installing Flask (this tutorial doesn’t cover Python and PIP installation)
+Step 1: Building the App structure
+Step 2: Creating the Main App code with the API request
+Step 3: Creating the 2 pages for the App (Main and Result) with Jinja, HTML, and CSS
+Step 4: Deploying and testing on your local laptop
+Step 5: Deploying on Google Cloud.
+
+Step 0 — Installing Flask and the libraries we will use in a virtual environment.
+We’ll build this project using a virtual environment. But why do we need one?
+With virtual environments, you create a local environment specific for each projects.
+ You can choose libraries you want to use without impacting your laptop environment.
+ As you code more projects on your laptop, each project will need different libraries.
+ With a different virtual environment for each project, you won’t have conflicts between your
+ system and your projects or between projects.
+
+Run Command Prompt (cmd.exe) with administrator privileges.
+ Not using admin privileges will prevent you from using pip.
+ #Optional
+pip install virtualenvwrapper-win
+pip install virtualenv
+Activate your virtual environment with “call” on Windows (same as “source” for Linux). This step changes your environment from the system to the project local environment.
+call venv\Scripts\activate.bat
+
+Step 2 — Creating the Main App code with the API request (Backend)
+==================================================================
+With the structure set up, you can start coding the backend of your application.
+ Flask’s “Hello world” example only uses one Python file. This tutorial uses two files to get
+  you comfortable with importing functions to your main app.
+The main.py is the server that routes the user to the homepage and to the result page.
+The weather.py file creates a function with API that retrieves the weather data based on the
+city selected. The function populates the resulting page.
+
